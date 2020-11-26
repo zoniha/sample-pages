@@ -1,3 +1,10 @@
+# image files
 *.jpg
 *.jpeg
 *.png
+
+# example folder
+free/
+
+# othres
+*.map
