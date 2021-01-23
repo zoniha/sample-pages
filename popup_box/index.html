@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/style.css" />
+  </head>
+  <body>
+    <a class="btn" onclick="popupToggle();">Subscribe</a>
+    <div id="popup">
+      <div class="content">
+        <img src="images/email.png" alt="" />
+        <h2>What is Lorem Ipsum?</h2>
+        <p>
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout.
+        </p>
+        <div class="inputbox">
+          <input type="email" placeholder="Enter Email" />
+        </div>
+        <div class="inputbox">
+          <input type="submit" value="Sign Up" class="btn" />
+        </div>
+      </div>
+      <a class="close" onclick="popupToggle();"><img src="images/cancel.png" alt="" /></a>
+    </div>
+  </body>
+
+  <script src="js/main.js"></script>
+</html>
