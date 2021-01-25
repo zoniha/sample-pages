@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400&display=swap')
+$fonts: 'Poppins', sans-serif
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  font-family: $fonts
+
+section
+  display: flex
+  justify-content: center
+  align-items: center
+  min-height: 100vh
+  background: #232323
+  overflow: hidden
+  padding: 100px 20px
+  box-sizing: border-box
+  &::before
+    content: ''
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #ef3b36
+    clip-path: circle(65% at 100% -20%)
+  &::after
+    content: ''
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: #47aafa
+    clip-path: circle(35% at 0% 100%)
+
+.container
+  position: relative
+  z-index: 10
+  display: flex
+  justify-content: center
+  align-items: center
+  justify-content: center
+  flex-wrap: wrap
+  .card
+    position: relative
+    width: 300px
+    height: 400px
+    margin: 20px 40px
+    background: rgba(255, 255, 255, 0.05)
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2)
+    backdrop-filter: blur(15px)
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    .content
+      position: absolute
+      bottom: 20px
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      transition: 0.5s ease-in-out
+      opacity: 0
+      visibility: hidden
+      a
+        position: relative
+        top: 10px
+        display: inline-block
+        padding: 12px 30px
+        background: #fff
+        border-radius: 40px
+        font-weight: 600
+        letter-spacing: 1px
+        color: #111
+        text-decoration: none
+        text-transform: uppercase
+      .color
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 8px 20px
+        h3
+          color: #fff
+          font-weight: 300
+          font-size: 14px
+          text-transform: uppercase
+          letter-spacing: 2px
+          margin-right: 10px
+        span
+          width: 20px
+          height: 20px
+          margin-right: 10px
+          background: #f00
+          border-radius: 50%
+          border: 2px solid #fff
+          box-sizing: border-box
+          cursor: pointer
+          &:nth-child(2)
+            background: #9bdc28
+          &:nth-child(3)
+            background: #03a9f4
+          &:nth-child(4)
+            background: #e91e63
+            
+      .size
+        span
+          width: 26px
+          height: 26px
+          text-align: center
+          line-height: 24px
+          display: inline-block
+          color: #111
+          background: #fff
+          border-radius: 4px
+          font-size: 14px
+          margin: 0 5px
+          font-weight: 500
+          transition: 0.5s
+          cursor: pointer
+          &:hover
+            background: #9dbc28
+    .imgBx
+      position: relative
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      padding: 20px
+      transition: 0.5s ease-in-out
+      img
+        max-width: 100%
+        margin: 0 0 10px
+        transition: 0.5s ease-in-out
+      h2
+        font-weight: 600
+        color: #fff
+    &:hover
+      .imgBx
+        transform: translateY(-100px)
+        img
+          transform: translate(-20px, -40px) rotate(-25deg) scale(1.4)
+      .content
+        opacity: 1
+        visibility: visible
